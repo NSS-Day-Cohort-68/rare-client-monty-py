@@ -1,7 +1,9 @@
-
+import { Navbar } from "../components/navbar/Navbar"
 
 export default function ApplicationViews() {
   return (
-    <div>Now Viewing ApplicationViews</div>
+    <div>
+    < Navbar/>
+    </div>
   )
 }
