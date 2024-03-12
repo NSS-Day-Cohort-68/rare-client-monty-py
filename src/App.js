@@ -4,17 +4,10 @@ import Login from "./components/auth/Login"
 import ApplicationViews from "./views/ApplicationViews"
 
 
+
 function App() {
   return (
       <Routes>
-        <Route path="/"
-              element={
-                <>
-                  <Navbar />
-                  <Outlet />
-                </>
-              }
-        >
           <Route path='/login' element={<Login />} />
           <Route path='*' element={
             <Authorized>
@@ -22,7 +15,6 @@ function App() {
             </Authorized>  
             }
           />
-        </Route>
       </Routes>
   );
 }
