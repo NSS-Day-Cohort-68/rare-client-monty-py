@@ -7,13 +7,22 @@ import ApplicationViews from "./views/ApplicationViews"
 function App() {
   return (
       <Routes>
-        <Route path='/login' element={<Login />} />
-        <Route path='*' element={
-          <Authorized>
-            <ApplicationViews />
-          </Authorized>  
-          }
-        />
+        <Route path="/"
+              element={
+                <>
+                  <Navbar />
+                  <Outlet />
+                </>
+              }
+        >
+          <Route path='/login' element={<Login />} />
+          <Route path='*' element={
+            <Authorized>
+              <ApplicationViews />
+            </Authorized>  
+            }
+          />
+        </Route>
       </Routes>
   );
 }
