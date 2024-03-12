@@ -6,7 +6,7 @@ export default function CategoryList() {
   return (
     <div className="categoryList-main-container">
         <div className="create-category-btn-container">
-            <button onClick={navigate('./createCategory')}>Create Category</button>
+            <button onClick={()=> {navigate('/createCategory')}}>Create Category</button>
         </div>
     </div>
   )
