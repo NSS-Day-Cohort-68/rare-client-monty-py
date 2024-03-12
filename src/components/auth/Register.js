@@ -3,12 +3,13 @@ import { createUser, getUserByEmail } from "../../services/UserService.js"
 import { useNavigate } from "react-router-dom"
 
 export default function Register() {
+    const date = new Date()
     const [user, setUser] = useState({
         first_name: "",
         last_name: "",
         username: "",
         email: "",
-        date: 11111111
+        date: date.toLocaleDateString
     })
 
     let navigate = useNavigate()
