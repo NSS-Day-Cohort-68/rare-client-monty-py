@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom"
 import React, { useState } from 'react';
-import "./Navbar.css"
+
 
 
 export const Navbar = () => {
@@ -10,13 +10,13 @@ export const Navbar = () => {
         return (
         <div >
 
-                {localStorage.getItem("rare_user") ? (
+                {localStorage.getItem("rareClient-user") ? (
                     <li className="navbar-item">
                         <Link
                         to=""
                         className="navbar-link"
                         onClick={() => {
-                            localStorage.removeItem("rare_user")
+                            localStorage.removeItem("rareClient-user")
                             navigate("/login", { replace: true })
                         }}
                         >
