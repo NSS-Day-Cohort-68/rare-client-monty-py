@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
-import { deletePost, getAllPosts } from "../../services/PostService"
-import "./Posts.css"
+import { getUserPosts } from "../services/PostService"
 import { Link } from "react-router-dom"
 
 
@@ -11,7 +10,7 @@ export const CurrentUserPosts = ({ currentUser }) => {
     const [allPosts, setAllPosts] = useState([])
 
     const getAndSetPosts = () => {
-        getAllPosts().then((postArray) => 
+        getUserPosts().then((postArray) => 
         setAllPosts(postArray))
     }
 
@@ -19,14 +18,9 @@ export const CurrentUserPosts = ({ currentUser }) => {
         getAndSetPosts()
     }, [])
 
-    useEffect(() => {
-        const foundPosts = allPosts.filter(post => post.userId === currentUser.id)
-        setCurrentUserPosts(foundPosts)
-    }, [allPosts, currentUser])       
-    
     return (
         <div className="posts-container">
-            <article className="posts">
+            <div className="posts">
                 {currentUserPosts.map((postObject) => {
                     return (
                     <div>
@@ -36,7 +30,7 @@ export const CurrentUserPosts = ({ currentUser }) => {
                     </div>
                     )
                 })}
-            </article>
+            </div>
         </div>
     )
 
