@@ -1,7 +1,10 @@
 import { useState } from "react"
+import { createNewCategory } from "../../services/CategoryService"
+import { useNavigate } from "react-router-dom"
 
 
 export default function CreateCategory() {
+  const navigate = useNavigate()
   const [category, setCategory] = useState("")
 
   const handleSave = (e) => {
@@ -9,9 +12,9 @@ export default function CreateCategory() {
     const categoryObj = {
       "label": category
     }
-
-    
-  }
+    createNewCategory(categoryObj).then(
+      ()=>{navigate("/categories")}
+    )}
 
 
   return (
