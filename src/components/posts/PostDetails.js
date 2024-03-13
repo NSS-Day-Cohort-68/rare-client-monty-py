@@ -4,17 +4,15 @@ import { getPostById } from "../services/PostService";
 
 
 export const PostDetails = () => {
-    const { postId } = useParams({});
-    const { post, setPost} = useState({});
+    // const { postId } = useParams({});
+    // const { post, setPost} = useState({});
 
-useEffect(() => {
-getPostById(postId).then((data) => {
-const postObj = data[0];
-setPost(postObj)
-})
-}, [postId])
+// useEffect(() => {
+// getPostById(postId).then((data) => {
+// const postObj = data[0];
+// setPost(postObj)
+// })
+// }, [postId])
 
-return(
-    <><div>Post Details</div></>
-)
+return <><h1>Post Details</h1></>
 }
