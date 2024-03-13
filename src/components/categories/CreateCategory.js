@@ -20,7 +20,7 @@ export default function CreateCategory() {
   return (
     <div className="createCategory-main">
       <form className="createCategory-form" onSubmit={handleSave}>
-        <h1>Creat a New Category</h1>
+        <h1>Create a New Category</h1>
         <fieldset>
           <input 
             type="text"
