@@ -14,11 +14,11 @@ export default function Register() {
 
     const registerNewUser = () => {
         return createUser(user).then((createdUser) => {
-            if(createdUser.hasOwnProperty("id")){
+            if(createdUser.token){
                 localStorage.setItem(
                     "rareClient-user",
                     JSON.stringify({
-                        id: createUser.id
+                        id: createdUser.token
                     })
                 )
 
