@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { getAllCategories } from "../../services/CategoryService"
+import "./categories.css"
 
 
 export default function CategoryList() {
@@ -29,7 +30,7 @@ export default function CategoryList() {
           })}
         </div>
         <div className="create-category-btn-container">
-            <button onClick={()=> {navigate('/createCategory')}}>Create Category</button>
+            <button className="create-category-btn" onClick={()=> {navigate('/createCategory')}}>Create Category</button>
         </div>
     </div>
   )
