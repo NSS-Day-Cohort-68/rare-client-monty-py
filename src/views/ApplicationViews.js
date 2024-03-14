@@ -6,6 +6,8 @@ import { Navbar } from "../components/navbar/Navbar"
 import { PostList } from "../components/posts/PostsList"
 import { PostDetails } from "../components/posts/PostDetails"
 import { CurrentUserPosts } from "../components/posts/CurrentUserPosts"
+import CreateTag from "../components/tags/CreateTag";
+import TagList from "../components/tags/TagList";
 
 export default function ApplicationViews() {
   return (
@@ -26,6 +28,8 @@ export default function ApplicationViews() {
         <Route path="createCategory" element={<CreateCategory />} />
         {/* <Route path="createpost" element={<CreatePost/>} /> */}
         <Route path="myposts" element={<CurrentUserPosts/>} />
+        <Route path="tags" element={<TagList/>}/>
+        <Route path="createTag" element={<CreateTag/>} />
       </Route>
     </Routes>
   

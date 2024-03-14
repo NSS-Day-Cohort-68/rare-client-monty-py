@@ -16,6 +16,10 @@ export const Navbar = () => {
                 <li className="navbar-item">
                     <Link to={"./myposts"}>My Posts</Link>
                 </li>
+                <li className="navbar-item">
+                    <Link to={"./tags"}>Tags List</Link>
+                </li>
+                
                 
 
                 {localStorage.getItem("rareClient-user") ? (
