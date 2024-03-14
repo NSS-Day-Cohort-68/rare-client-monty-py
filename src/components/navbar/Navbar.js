@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom"
 import React, { useState } from 'react';
-
+import "./navbar.css"
 
 
 export const Navbar = () => {
@@ -8,8 +8,11 @@ export const Navbar = () => {
     const navigate = useNavigate()
       
         return (
-        <div >
-
+        <div className="navbar-main">
+            <ul className="navbar-list">
+                <li className="navbar-item">
+                    <Link to={"./categories"}>Category Management</Link>
+                </li>
                 {localStorage.getItem("rareClient-user") ? (
                     <li className="navbar-item">
                         <Link
@@ -26,6 +29,7 @@ export const Navbar = () => {
                     ) : (
                     ""
                     )}
+            </ul>
         </div>
     )
 }

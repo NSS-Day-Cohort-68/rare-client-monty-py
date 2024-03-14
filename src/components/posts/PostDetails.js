@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
-import { getPostById } from "../services/PostService";
+import { getPostById } from "../../services/PostService";
+import "./posts.css"
 
 
 export const PostDetails = () => {
@@ -14,30 +15,29 @@ setPost(postObj);
 })
 }, [postId])
 
-return (<section>
-    <div>
-    <h1>Post Details</h1>
+return (<section class="post-details-container">
+
+    <div class="posts-section">
+        <h1> {post.post_title} </h1>
+       
     </div>
-    <div>
-        <span>Post Title: </span>
-        {post.post_title}
-    </div>
-    <div>
-        <span>Post Image: </span>
+    <div class="posts-section">
+        <span class="post-img">Post Image: </span>
         {post.post_image_url}
     </div>
-    <div>
-        <span>Content: </span>
-        {post.post_content}
+    <div class="posts-section">
+        <span> {post.post_content} </span>
+        
     </div>
-    <div>
+    <div class="posts-section">
         <span>Date: </span>
         {post.post_date}
     </div>
-    {/* <div>
-        <span>Author: </span>
-        {post.post_author.author_first_name}
-    </div> */}
+    <div class="posts-section">
+        <span>By </span>
+        {post.post_author?.author_first_name + " " + post.post_author?.author_last_name}
+    </div>
+    <div class="posts-section"><button>View Comments</button></div>
 
     </section>
 )
