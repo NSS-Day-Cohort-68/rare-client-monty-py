@@ -6,26 +6,36 @@ import { Link } from "react-router-dom"
 
 export const CurrentUserPosts = ({ currentUser }) => {
 
-    const [currentUserPosts, setCurrentUserPosts] = useState([])
-    const [allPosts, setAllPosts] = useState([])
+    const [posts, setPosts] = useState([])
+    const [user, setUser] = useState(0)
 
     const getAndSetPosts = () => {
-        getUserPosts().then((postArray) => 
-        setAllPosts(postArray))
+        getUserPosts(user).then((postArray) => 
+        setPosts(postArray))
     }
 
     useEffect(() => {
         getAndSetPosts()
-    }, [])
+    }, [user])
+
+
+    useEffect(() => {
+        const userId = JSON.parse(localStorage.getItem("rareClient-user"));
+        if (userId) {
+         setUser(userId.id);
+        }
+      }, []);
+  
 
     return (
         <div className="posts-container">
             <div className="posts">
-                {currentUserPosts.map((postObject) => {
+                {posts?.map((postObject) => {
                     return (
                     <div>
                         <Link to={`/posts/${postObject.id}`}>
-                        <p className="post">{postObject.title}</p>
+                        <p className="post">Title:{postObject.title}Author:{postObject.first_name} {postObject.last_name}</p>
+                        
                         </Link>
                     </div>
                     )
