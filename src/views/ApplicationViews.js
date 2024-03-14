@@ -3,7 +3,6 @@ import CreateCategory from "../components/categories/CreateCategory";
 
 import { Outlet, Route, Routes } from "react-router-dom"
 import { Navbar } from "../components/navbar/Navbar"
-import { Route, Routes, Outlet } from "react-router-dom"
 import { CurrentUserPosts } from "../components/posts/CurrentUserPosts"
 
 export default function ApplicationViews() {

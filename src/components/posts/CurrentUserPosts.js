@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getUserPosts } from "../services/PostService"
+import { getUserPosts } from "../../services/PostService"
 import { Link } from "react-router-dom"
 
 
@@ -34,7 +34,7 @@ export const CurrentUserPosts = ({ currentUser }) => {
                     return (
                     <div>
                         <Link to={`/posts/${postObject.id}`}>
-                        <p className="post">Title:{postObject.title}Author:{postObject.first_name} {postObject.last_name}</p>
+                        <p className="post">Title: {postObject.title}  Author: {postObject.user.first_name} {postObject.user.last_name} Category: {postObject.category.label}</p>
                         
                         </Link>
                     </div>
