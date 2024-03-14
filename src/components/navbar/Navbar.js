@@ -11,12 +11,14 @@ export const Navbar = () => {
         <div className="navbar-main">
             <ul className="navbar-list">
                 <li className="navbar-item">
-                    <Link to={"./categories"}>Category Management</Link>
+                    <Link to={"./posts"}>All Posts</Link>
                 </li>
                 <li className="navbar-item">
                     <Link to={"./myposts"}>My Posts</Link>
                 </li>
-                
+                <li className="navbar-item">
+                    <Link to={"./categories"}>Category Management</Link>
+                </li>
 
                 {localStorage.getItem("rareClient-user") ? (
                     <li className="navbar-item">
