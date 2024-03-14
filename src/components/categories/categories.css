@@ -1,0 +1,25 @@
+.categoryList-main-container{
+    margin: 20px 400px;
+}
+
+.categories-list-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.category-item{
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid rgb(183, 182, 182)
+}
+
+.create-category-btn-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.create-category-btn{
+    margin-right: 40px;
+}
