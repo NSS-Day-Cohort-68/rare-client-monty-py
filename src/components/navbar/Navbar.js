@@ -21,6 +21,7 @@ export const Navbar = () => {
                 </li>
                 <li>
                     <Link to={"./tags"}>Tags List</Link>
+                    <Link to={"./tags"}>Tags Management</Link>
                 </li>
                 
                 
