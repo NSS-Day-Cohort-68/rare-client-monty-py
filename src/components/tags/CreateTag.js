@@ -33,7 +33,7 @@ export default function CreateTag() {
         <div className="createTag-btn-container">
           <button className="createTag-btn" type="submit">Save</button>
         </div>
-      </form>
+      </form>   
     </div>
   )
 }
