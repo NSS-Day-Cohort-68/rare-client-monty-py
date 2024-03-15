@@ -22,8 +22,7 @@ return (<section class="post-details-container">
        
     </div>
     <div class="posts-section">
-        <span class="post-img">Post Image: </span>
-        {post.post_image_url}
+       <img class="post-img" src={post.post_image_url} alt="img"/>
     </div>
     <div class="posts-section">
         <span> {post.post_content} </span>

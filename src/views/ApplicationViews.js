@@ -20,7 +20,8 @@ export default function ApplicationViews() {
         </>
       }
       >
-        <Route path="posts">
+        <Route index element={<PostList />} />
+        <Route path="posts" >
           <Route index element={<PostList/>} />
           <Route path=":postId" element={<PostDetails/>}/>
         </Route>
